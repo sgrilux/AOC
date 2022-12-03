@@ -15,6 +15,8 @@ def main(calories_file):
     max_calories = np.amax(elves_calories)
     elf_with_more_calories = elves_calories.index(max_calories) + 1
     print(f'The Elf that carries the most calories is Elf n.{elf_with_more_calories}, with {max_calories}')
+    top_three = sorted(elves_calories,reverse=True)[0:3]
+    print(f'Top three elves calories sum: {np.sum(top_three)}')
 
 if __name__ == '__main__':
     main('./input.txt')
